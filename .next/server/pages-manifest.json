@@ -1,0 +1,13 @@
+{
+  "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/": "pages/index.html",
+  "/serviceProvider/Appointments": "pages/serviceProvider/Appointments.html",
+  "/serviceProvider/Profile": "pages/serviceProvider/Profile.html",
+  "/_error": "pages/_error.js",
+  "/serviceProvider/RegisterBusiness": "pages/serviceProvider/RegisterBusiness.html",
+  "/serviceProvider/login": "pages/serviceProvider/login.html",
+  "/serviceProvider/UserProfile": "pages/serviceProvider/UserProfile.html",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}
