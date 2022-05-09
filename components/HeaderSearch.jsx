@@ -1,5 +1,6 @@
 import React from "react";
 import { BsCart3 } from "react-icons/bs";
+import Image from "next/image";
 
 export default function HeaderSearch() {
   return (
@@ -11,21 +12,25 @@ export default function HeaderSearch() {
         }}
       >
         <div className="items-center block py-32 md:flex md:flex-wrap md:justify-between">
-          <div className="absolute right-0 p-4 bg-white rounded-lg rounded-r-none z-10">
+          <div className="absolute right-0 z-10 p-4 bg-white rounded-lg rounded-r-none">
             {" "}
             <BsCart3 className="w-full" />
           </div>
         </div>
         <div className="absolute inset-6">
-            <div className="w-full p-1 bg-white rounded-full">
-                <input type='text' className="w-full px-4 py-1 rounded-full outline-none" placeholder="Search"/>
-            </div>
+          <div className="w-full p-1 bg-white rounded-full">
+            <input
+              type="text"
+              className="w-full px-4 py-1 rounded-full outline-none"
+              placeholder="Search"
+            />
+          </div>
         </div>
-        <div className="absolute left-0 w-1/2 -bottom-12">
-          <img src="hero2.png"></img>
+        <div className="absolute left-0 hidden w-1/2 md:block -bottom-12">
+          <Image src="hero2.png" layout="intrinsic" width={500} height={300} />
         </div>
-        <div className="absolute right-0 w-52 -bottom-4">
-          <img src="hero3.png"></img>
+        <div className="hidden absolute md:block right-0.5 w-52 -bottom-4">
+          <Image src="hero3.png" layout="intrinsic" width={500} height={800} />
         </div>
       </div>
     </div>
