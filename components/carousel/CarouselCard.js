@@ -9,6 +9,7 @@ export default function CarouselCard({
   price,
   sold,
   rating,
+  color
 }) {
   return (
     <div className="p-4 rounded-lg card">

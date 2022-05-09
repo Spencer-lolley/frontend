@@ -16,8 +16,8 @@ import {
   OfficalBrands,
   Partners,
   DiscountBanner,
+  FeaturedProductsCarousel,
 } from "../components";
-import Nav from "../components/Layout/Nav";
 
 export default function Home() {
   return (
@@ -32,11 +32,11 @@ export default function Home() {
       <HeaderSearch />
       <OfficalBrands />
       <TrendingProductsCarousel />
+      <FeaturedProductsCarousel />
       <Header />
       <RecommendedProducts />
       <TrendingProducts />
       <FeaturedProducts />
-      {/* <Nav /> */}
     </Layout>
   );
 }

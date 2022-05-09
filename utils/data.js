@@ -215,6 +215,17 @@ const data = {
       rating: 5.5,
       sold: 300,
     },
+    {
+      id: 5,
+      productName: "Nice and lovely",
+      href: "#",
+      imgSrc: "./products/featured/image 14.png",
+      imageAlt: "Nice and Lovely",
+      price: 2000,
+      description: "Body Lotion",
+      rating: 5.5,
+      sold: 300,
+    },
   ],
   testimonials: [
     {

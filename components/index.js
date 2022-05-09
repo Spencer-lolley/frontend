@@ -22,4 +22,5 @@ export { default as Categories } from './Categories';
 export { default as CarouselCard } from './carousel/CarouselCard';
 export { default as OfficalBrands } from './OfficialBrands';
 export { default as Partners } from './Partners';
-export { default as DiscountBanner } from './DiscountBanner'
+export { default as DiscountBanner } from './DiscountBanner';
+export { default as FeaturedProductsCarousel } from './shop/FeaturedProductsCarousel';
