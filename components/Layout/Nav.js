@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Transition } from "@headlessui/react";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const navigation = [
   { name: "Barber", href: "#", current: true },
@@ -19,16 +20,16 @@ export default function Nav() {
 
   return (
     <>
-      <nav className="shadow-lg sticky top-0 z-30 w-full bg-white">
+      <nav className="sticky top-0 z-30 w-full bg-white shadow-lg">
         <div className="w-full">
-          <div className="flex items-center h-20 w-full">
-            <div className="flex items-center md:mx-16 ml-4 justify-between w-full">
-              <div className="flex justify-center items-center flex-shrink-1">
-                <h1 className="font-bold text-3xl cursor-pointer">Logo</h1>
+          <div className="flex items-center w-full h-20">
+            <div className="flex items-center justify-between w-full ml-4 md:mx-16">
+              <div className="flex items-center justify-center flex-shrink-1">
+                <h1 className="text-3xl font-bold cursor-pointer">Logo</h1>
               </div>
               {/* large monitors */}
               <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
+                <div className="flex items-baseline ml-10 space-x-4">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
@@ -48,29 +49,39 @@ export default function Nav() {
                   ))}
                 </div>
               </div>
-              <div className="hidden md:block">
-                <button
-                  type="button"
-                  className="uppercase text-white bg-OrangeText focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-orange-500"
-                >
-                  Sign up/Login
-                </button>
+              <div className="flex items-center justify-center">
+                <div className="mr-6">
+                  <button
+                    type="button"
+                    className="hidden md:block uppercase text-white bg-OrangeText focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-orange-500"
+                  >
+                    Sign up/Login
+                  </button>
+                </div>
+                <div>
+                  <div className="relative">
+                    <AiOutlineShoppingCart className="text-gray-500 w-7 h-7 hover:text-OrangeText" />
+                  </div>
+                  <div className="absolute top-4 right-14">
+                    <sub className="rounded-full p-0.5 text-white font-semibold bg-OrangeText">20</sub>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* small screens */}
-            <div className="mr-2 flex md:hidden">
+            <div className="flex mr-2 md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-OrangeText inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-OrangeText focus:outline-none focus:ring-offset-2 focus:ring-offset-orange-800 focus:ring-white"
+                className="inline-flex items-center justify-center p-2 text-white rounded-md bg-OrangeText hover:bg-OrangeText focus:outline-none focus:ring-offset-2 focus:ring-offset-orange-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
                 <span className="sr-only">Open main menu</span>
                 {!isOpen ? (
                   <svg
-                    className="block h-6 w-6"
+                    className="block w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -86,7 +97,7 @@ export default function Nav() {
                   </svg>
                 ) : (
                   <svg
-                    className="block h-6 w-6"
+                    className="block w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -119,7 +130,7 @@ export default function Nav() {
             <div className="md:hidden" id="mobile-menu">
               <div
                 ref={ref}
-                className="bg-white px-4 pt-2 pb-3 space-y-2 flex flex-col"
+                className="flex flex-col px-4 pt-2 pb-3 space-y-2 bg-white"
               >
                 {navigation.map((mobile) => (
                   <Link
