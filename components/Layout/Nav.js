@@ -59,11 +59,16 @@ export default function Nav() {
                   </button>
                 </div>
                 <div>
-                  <div className="relative">
-                    <AiOutlineShoppingCart className="text-gray-500 w-7 h-7 hover:text-OrangeText" />
-                  </div>
+                  <Link href="#" passHref>
+                    <div className="relative">
+                      <AiOutlineShoppingCart className="text-gray-500 w-7 h-7 hover:text-OrangeText" />
+                    </div>
+                  </Link>
+
                   <div className="absolute top-4 right-14">
-                    <sub className="rounded-full p-0.5 text-white font-semibold bg-OrangeText">20</sub>
+                    <sub className="rounded-full p-0.5 text-white font-semibold bg-OrangeText">
+                      20
+                    </sub>
                   </div>
                 </div>
               </div>
