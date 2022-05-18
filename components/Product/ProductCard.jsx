@@ -18,7 +18,7 @@ export default function ProductCard({
           <img
             src={imgSrc}
             alt={imageAlt}
-            className="object-cover object-center w-full group-hover:opacity-75"
+            className="object-cover object-center w-full h-64 group-hover:opacity-75"
           />
         </div>
         <div className="flex items-center justify-between">

@@ -43,7 +43,6 @@ a {
   word-spacing: 0.5rem;
 }
 
-
 /* sign up / login button */
 button .links {
   background-color: #ee5600;
@@ -81,8 +80,8 @@ button .links {
   -webkit-text-stroke: 1px #000000;
 }
 
-@media screen and (max-width:550px) {
-  .testimonials{
+@media screen and (max-width: 550px) {
+  .testimonials {
     font-size: 2.4rem;
     margin: 0 auto;
   }
@@ -163,6 +162,28 @@ button .links {
     min-width: 100%;
   }
 }
+
+/* login page */
+.rec1 {
+  background-color: #be5050;
+  left: -50.96%;
+  right: 82.62%;
+  top: 10.04%;
+  bottom: -20.09%;
+  border-radius: 50px;
+  transform: rotate(-38.02deg);
+}
+
+.rec2 {
+  left: 50.66%;
+  bottom: -50.47%;
+  width: 640px;
+  height: 1200px;
+  background-color: #ddd4d5;
+  transform: rotate(-40.02deg);
+  border-radius: 50px;
+}
+
 /* footer */
 footer {
   background-color: black;

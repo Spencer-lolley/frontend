@@ -3,7 +3,7 @@ const data = {
     {
       id: 1,
       productName: "Nice and lovely",
-      href: "#",
+      slug: "nice-and-lovely",
       imgSrc: "../products/image 20.png",
       imageAlt: "Nice and Lovely",
       price: 2000,

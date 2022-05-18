@@ -51,15 +51,16 @@ export default function Nav() {
               </div>
               <div className="flex items-center justify-center">
                 <div className="mr-6">
-                  <button
-                    type="button"
-                    className="hidden md:block uppercase text-white bg-OrangeText focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-orange-500"
-                  >
-                    Sign up/Login
-                  </button>
+                  <Link href="/serviceProvider/RegisterBusiness" passHref>
+                    <a
+                      className="hidden md:block uppercase text-white bg-OrangeText focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-orange-500"
+                    >
+                      Sign up/Login
+                    </a>
+                  </Link>
                 </div>
                 <div>
-                  <Link href="#" passHref>
+                  <Link href="/cart" passHref>
                     <div className="relative">
                       <AiOutlineShoppingCart className="text-gray-500 w-7 h-7 hover:text-OrangeText" />
                     </div>

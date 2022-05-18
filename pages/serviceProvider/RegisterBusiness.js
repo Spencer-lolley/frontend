@@ -32,10 +32,10 @@ export default function RegisterBusiness() {
     <div className="flex bg-GreyBackground">
       <Meta title="Register Business"/>
 
-      <div className="hidden md:flex w-2/5 md:w-1/4 h-screen">
+      <div className="hidden w-2/5 h-screen md:flex md:w-1/4">
         {" "}
         <div class="w-60 min-h-full shadow-md bg-RedBackground px-1 absolute py-2">
-          <div className="flex uppercase text-2xl m-6">
+          <div className="flex m-6 text-2xl uppercase">
             <span>
               <h1 className="font-semibold">Company</h1>
             </span>
@@ -44,24 +44,18 @@ export default function RegisterBusiness() {
         </div>
       </div>
 
-      <div className="min-h-full w-full py-8 justify-center px-10">
+      <div className="justify-center w-full min-h-full px-10 py-8">
         <div className="flex">
           <div className="w-1/2">
-            <h3 className="capitalize text-2xl font-semibold">
+            <h3 className="text-2xl font-semibold capitalize">
               List your business
             </h3>
             <form>
-              <div className="mt-8 form-group transform border-b-2 border-gray-400 bg-transparent text-lg duration-300 focus-within:border-RedBackground">
+              <div className="mt-8 text-lg duration-300 transform bg-transparent border-b-2 border-gray-400 form-group focus-within:border-RedBackground">
                 <input
                   type="text"
                   name="fullName"
-                  className="form-control
-                    w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none
-                    transition
-                    ease-in-out
-                    m-0
-                    py-4
-                    "
+                  className="w-full py-4 m-0 transition ease-in-out bg-transparent border-none outline-none form-control placeholder:italic focus:outline-none "
                   placeholder="Full Name"
                   {...register("fullName", {
                     required: "Please input your Full Names here!",
@@ -77,17 +71,11 @@ export default function RegisterBusiness() {
                 <p className="text-RedBackground">{errors.fullName?.message}</p>
               </div>
               {/* phone */}
-              <div className="mt-8 form-group transform border-b-2 border-gray-400 bg-transparent text-lg duration-300 focus-within:border-RedBackground">
+              <div className="mt-8 text-lg duration-300 transform bg-transparent border-b-2 border-gray-400 form-group focus-within:border-RedBackground">
                 <input
                   type="tel"
                   name="phone"
-                  className="form-control
-                    w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none
-                    transition
-                    ease-in-out
-                    m-0
-                    py-4
-                    "
+                  className="w-full py-4 m-0 transition ease-in-out bg-transparent border-none outline-none form-control placeholder:italic focus:outline-none "
                   placeholder="Phone Number"
                   {...register("phone", {
                     required: "Please input your phone number!",
@@ -100,17 +88,11 @@ export default function RegisterBusiness() {
                 <p className="text-RedBackground">{errors.phone?.message}</p>
               </div>
               {/* Email */}
-              <div className="mt-8 form-group transform border-b-2 border-gray-400 bg-transparent text-lg duration-300 focus-within:border-RedBackground">
+              <div className="mt-8 text-lg duration-300 transform bg-transparent border-b-2 border-gray-400 form-group focus-within:border-RedBackground">
                 <input
                   type="email"
                   name="email"
-                  className="form-control
-                    w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none
-                    transition
-                    ease-in-out
-                    m-0
-                    py-4
-                    "
+                  className="w-full py-4 m-0 transition ease-in-out bg-transparent border-none outline-none form-control placeholder:italic focus:outline-none "
                   placeholder="Email Address"
                   {...register("email", {
                     required: "Please input your email address!",
@@ -124,17 +106,11 @@ export default function RegisterBusiness() {
                 <p className="text-RedBackground">{errors.email?.message}</p>
               </div>
               {/* Password */}
-              <div className="relative mt-8 form-group transform border-b-2 border-gray-400 bg-transparent text-lg duration-300 focus-within:border-RedBackground">
+              <div className="relative mt-8 text-lg duration-300 transform bg-transparent border-b-2 border-gray-400 form-group focus-within:border-RedBackground">
                 <input
                   type={passwordEye === false ? "password" : "text"}
                   name="password"
-                  className="form-control
-                    w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none
-                    transition
-                    ease-in-out
-                    m-0
-                    py-4
-                    "
+                  className="w-full py-4 m-0 transition ease-in-out bg-transparent border-none outline-none form-control placeholder:italic focus:outline-none "
                   placeholder="Password"
                   {...register("password", {
                     required: "Please provide a password!",
@@ -160,7 +136,7 @@ export default function RegisterBusiness() {
                 </div>
               </div>
               {/* Confirm password */}
-              <div className="mt-8 form-group transform border-b-2 border-gray-400 bg-transparent text-lg duration-300 focus-within:border-RedBackground">
+              <div className="mt-8 text-lg duration-300 transform bg-transparent border-b-2 border-gray-400 form-group focus-within:border-RedBackground">
                 <input
                   type={passwordConfirmEye === false ? "password" : "text"}
                   name="confirmPassword"
@@ -168,13 +144,7 @@ export default function RegisterBusiness() {
                     e.preventDefault();
                     return false;
                   }}
-                  className="form-control
-                    w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none
-                    transition
-                    ease-in-out
-                    m-0
-                    py-4
-                    "
+                  className="w-full py-4 m-0 transition ease-in-out bg-transparent border-none outline-none form-control placeholder:italic focus:outline-none "
                   placeholder="Confirm Password"
                   {...register("confirmPassword", {
                     required: "Please confirm your password!",
@@ -195,7 +165,7 @@ export default function RegisterBusiness() {
                 </div>
               </div>
 
-              <div className="mt-4 flex text-sm font-semibold">
+              <div className="flex mt-4 text-sm font-semibold">
                 <div className="mr-2">
                   <input type="checkbox" />
                 </div>
@@ -205,8 +175,8 @@ export default function RegisterBusiness() {
               </div>
             </form>
           </div>
-          <div className="w-1/2 flex justify-center items-center">
-            <div className="flex flex-col italic font-sm items-center">
+          <div className="flex items-center justify-center w-1/2">
+            <div className="flex flex-col items-center italic font-sm">
               <div>
                 <Link href="#" passHref>
                   <a>Continue with Facebook</a>
@@ -219,10 +189,10 @@ export default function RegisterBusiness() {
               </div>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="relative top-60 md:grid md:grid-cols-2">
-                  <div className="flex flex-col justify-beteen mx-4 items-center">
+                  <div className="flex flex-col items-center mx-4 justify-beteen">
                     <div>
                       <button
-                        className="mx-4 uppercase bg-black rounded-full text-white px-10 py-2"
+                        className="px-10 py-2 mx-4 text-white uppercase bg-black rounded-full"
                         type="submit"
                       >
                         sign up
@@ -238,9 +208,9 @@ export default function RegisterBusiness() {
                   </div>
                   <div className="flex flex-col items-center">
                     <div>
-                      <Link href="#">
+                      <Link href="/Login">
                         <a
-                          className="uppercase bg-black rounded-full text-white px-10 py-2"
+                          className="px-10 py-2 text-white uppercase bg-black rounded-full"
                           type="submit"
                         >
                           log in
