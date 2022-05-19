@@ -1,7 +1,15 @@
-import React from 'react'
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { Meta } from "../components";
 
 export default function Clogin() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => alert(JSON.stringify(data));
   return (
     <div className="w-full h-screen overflow-y-hidden bg-GreyBackground">
       <div className="w-full">
@@ -21,26 +29,52 @@ export default function Clogin() {
             <div className="flex items-center justify-center">
               <div className="absolute mt-10 text-center top-1/4">
                 <h3 className="mb-10 text-3xl font-bold text-RedBackground">
-                  Log In as 
-                  
-                  Client
+                  Log In as Client
                 </h3>
 
                 <div className="flex flex-col text-sm uppercase">
-                  <form>
+                  <form onSubmit={handleSubmit(onSubmit)}>
                     <div>
                       <input
                         type="email"
                         placeholder="Email Address"
                         className="w-full px-4 py-2 text-sm border rounded-full border-RedBackground focus:outline outline-red-500"
+                        name="email"
+                        {...register("email", {
+                          required: "Please input your Email Address!",
+                          pattern: {
+                            value:
+                              /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                            message: "Enter a valid Email Address!",
+                          },
+                        })}
                       />
+                      <p className="text-RedBackground">
+                        {errors.email?.message}
+                      </p>
                     </div>
                     <div className="mt-6">
                       <input
                         type="password"
                         placeholder="Password"
                         className="w-full px-4 py-2 text-sm border rounded-full border-RedBackground focus:outline outline-red-500"
+                        {...register("password", {
+                          required: "Please provide a password!",
+                          minLength: {
+                            value: 8,
+                            message: "Minimum length should be 8 characters!",
+                          },
+                          pattern: {
+                            value:
+                              /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,
+                            message:
+                              "Password should contain uppercase, lowercase, numbers and one special character",
+                          },
+                        })}
                       />
+                      <p className="text-RedBackground">
+                        {errors.password?.message}
+                      </p>
                     </div>
                     <div className="my-6">
                       <input
@@ -64,5 +98,5 @@ export default function Clogin() {
         </div>
       </div>
     </div>
-  )
+  );
 }

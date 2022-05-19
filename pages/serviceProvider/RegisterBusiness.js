@@ -16,10 +16,7 @@ export default function RegisterBusiness() {
   const handleConfirmPasswordClick = () => {
     setPasswordConfirmEye(!passwordConfirmEye);
   };
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
+  const {register,handleSubmit,formState: { errors },
     watch,
   } = useForm({
     mode: "onChange",
