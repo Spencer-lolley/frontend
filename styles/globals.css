@@ -184,6 +184,15 @@ button .links {
   border-radius: 50px;
 }
 
+/* profile page */
+.content{
+  display: none;
+}
+
+.active-content{
+  display: block;
+}
+
 /* footer */
 footer {
   background-color: black;

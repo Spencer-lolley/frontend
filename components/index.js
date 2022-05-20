@@ -1,3 +1,5 @@
+import { FormProvider } from "react-hook-form";
+
 // layout
 export { default as Nav } from "./Layout/Nav";
 export { default as Footer } from "./Layout/Footer";
@@ -5,7 +7,8 @@ export { default as Header } from "./Header";
 export { default as HeaderMain } from './HeaderMain';
 export { default as HeaderSearch } from "./HeaderSearch";
 export { default as Layout } from './Layout'
-export { default as SProviderLayout } from "./SProvider/SProviderLayout"
+export { default as SProviderLayout } from "./SProvider/SProviderLayout";
+export { default as SProviderNav } from "./SProvider/SProviderNav";
 
 
 // global components
