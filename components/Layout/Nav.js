@@ -43,18 +43,17 @@ export default function Nav() {
                       offset={50}
                       duration={500}
                       aria-current={item.current ? "page" : undefined}
+                      passHref
                     >
-                      {item.name}
+                      <a>{item.name}</a>
                     </Link>
                   ))}
                 </div>
               </div>
               <div className="flex items-center justify-center">
                 <div className="mr-6">
-                  <Link href="/serviceProvider/RegisterBusiness" passHref>
-                    <a
-                      className="hidden md:block uppercase text-white bg-OrangeText focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-orange-500"
-                    >
+                  <Link href="/Login" passHref>
+                    <a className="hidden md:block uppercase text-white bg-OrangeText focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-orange-500">
                       Sign up/Login
                     </a>
                   </Link>

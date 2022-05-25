@@ -8,7 +8,6 @@ export { default as HeaderMain } from './HeaderMain';
 export { default as HeaderSearch } from "./HeaderSearch";
 export { default as Layout } from './Layout'
 export { default as SProviderLayout } from "./SProvider/SProviderLayout";
-export { default as SProviderNav } from "./SProvider/SProviderNav";
 
 
 // global components
@@ -27,3 +26,10 @@ export { default as OfficalBrands } from './OfficialBrands';
 export { default as Partners } from './Partners';
 export { default as DiscountBanner } from './DiscountBanner';
 export { default as FeaturedProductsCarousel } from './shop/FeaturedProductsCarousel';
+
+
+// Modals
+export { default as AddServiceModal } from './SProvider/Modal/AddServiceModal';
+export { default as AddProductModal } from './SProvider/Modal/AddProductModal';
+export { default as AddImagesModal } from './SProvider/Modal/AddImagesModal';
+export { default as DeleteProductModal } from './SProvider/Modal/DeleteProductModal'
