@@ -26,7 +26,7 @@ export default function RegisterBusiness() {
 
   const password = watch("password");
   return (
-    <div className="flex bg-GreyBackground">
+    <div className="flex bg-white">
       <Meta title="Register Business"/>
 
       <div className="hidden w-2/5 h-screen md:flex md:w-1/4">

@@ -10,6 +10,11 @@ const data = {
       description: "Body Lotion",
       rating: 5.5,
       sold: 300,
+      features:[
+        'perfect for men',
+        '400 gramms',
+        'perfect waves for your scalp'
+      ]
     },
     {
       id: 2,

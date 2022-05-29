@@ -32,6 +32,7 @@ export default function Profile() {
     name:'Myfiles'
   })
 
+  console.log(files); 
   const openModal = () => {
     setShowModal((prev) => !prev);
   };

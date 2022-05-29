@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
+import Link from "next/link";
 import { Transition } from "@headlessui/react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
@@ -34,18 +34,18 @@ export default function Nav() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className={
-                        item.current
-                          ? "text-OrangeText"
-                          : "px-3 py-2 rounded-md text-medium text-gray-500 hover:text-OrangeText"
-                      }
-                      smooth={true}
-                      offset={50}
-                      duration={500}
                       aria-current={item.current ? "page" : undefined}
                       passHref
                     >
-                      <a>{item.name}</a>
+                      <a
+                        className={
+                          item.current
+                            ? "text-OrangeText"
+                            : "px-3 py-2 rounded-md text-medium text-gray-500 hover:text-OrangeText"
+                        }
+                      >
+                        {item.name}
+                      </a>
                     </Link>
                   ))}
                 </div>
@@ -53,19 +53,22 @@ export default function Nav() {
               <div className="flex items-center justify-center">
                 <div className="mr-6">
                   <Link href="/Login" passHref>
-                    <a className="hidden md:block uppercase text-white bg-OrangeText focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-orange-500">
+                    <a className="hidden md:block uppercase text-white bg-OrangeText focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:bg-orange-500">
                       Sign up/Login
                     </a>
                   </Link>
                 </div>
-                <div>
+                <div className="mr-4 md:mr-0">
                   <Link href="/cart" passHref>
                     <div className="relative">
-                      <AiOutlineShoppingCart className="text-gray-500 w-7 h-7 hover:text-OrangeText" />
+                      <AiOutlineShoppingCart
+                        className="text-gray-500 hover:text-OrangeText"
+                        size={30}
+                      />
                     </div>
                   </Link>
 
-                  <div className="absolute top-4 right-14">
+                  <div className="absolute top-4 right-14 md:right-14">
                     <sub className="rounded-full p-0.5 text-white font-semibold bg-OrangeText">
                       20
                     </sub>
@@ -138,19 +141,16 @@ export default function Nav() {
                 className="flex flex-col px-4 pt-2 pb-3 space-y-2 bg-white"
               >
                 {navigation.map((mobile) => (
-                  <Link
-                    key={mobile.name}
-                    href={mobile.href}
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                    className={
-                      mobile.current
-                        ? "text-OrangeText"
-                        : "py-2 rounded-md text-medium text-gray-500 hover:text-OrangeText"
-                    }
-                  >
-                    {mobile.name}
+                  <Link key={mobile.name} href={mobile.href}>
+                    <a
+                      className={
+                        mobile.current
+                          ? "text-OrangeText"
+                          : "py-2 rounded-md text-medium text-gray-500 hover:text-OrangeText"
+                      }
+                    >
+                      {mobile.name}
+                    </a>
                   </Link>
                 ))}
 

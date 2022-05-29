@@ -23,19 +23,19 @@ export default function AddImagesModal({ showImageModal, setShowImageModal, file
     return () => document.removeEventListener("keydown", keyPress);
   }, [keyPress]);
 
-    const uploadHandler = e => {
-      const file = event.target.files[0];
-      file.isUpload = true
-      setFiles([...files, file])
+  const uploadHandler = e => {
+    const file = e.target.files[0];
+    file.isUpload = true
+    // setFiles([...files, file])
 
-      // upload file
-      const formData = new FormData();
-      formData.append (
-        file.name,
-        file,
-        file.name
-      )
-    }
+    // upload file
+    const formData = new FormData();
+    formData.append (
+      file.name,
+      file,
+      file.name
+    )
+  }
   
   return (
     <>
@@ -91,7 +91,7 @@ export default function AddImagesModal({ showImageModal, setShowImageModal, file
               <div className="float-right m-6 cursor-pointer">
                 <ImCancelCircle
                   className="text-white"
-                  onClick={() => setShowModal((prev) => !prev)}
+                  onClick={() => setShowImageModal((prev) => !prev)}
                 />
               </div>
             </div>

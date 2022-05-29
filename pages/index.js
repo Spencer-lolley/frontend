@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { Route, Routes, BrowserRouter } from "react-router-dom";
 import {
   Meta,
   Layout,
@@ -20,8 +19,6 @@ import {
   FeaturedProductsCarousel,
   Products,
 } from "../components";
-import Login from "./Login";
-import { Router } from "next/router";
 
 export default function Home() {
   return (
@@ -44,12 +41,6 @@ export default function Home() {
         <TrendingProducts />
         <FeaturedProducts />
       </Layout>
-
-      {/* <BrowserRouter>
-        <Routes>
-          <Route path="/Login" element={<Login /> } />
-        </Routes>
-      </BrowserRouter> */}
     </div>
   );
 }

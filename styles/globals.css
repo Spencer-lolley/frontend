@@ -162,6 +162,38 @@ button .links {
     min-width: 100%;
   }
 }
+/* !Carousel card */
+
+/* Product page */
+.product-background {
+  position: absolute;
+  top: -60%;
+  right: 0;
+  z-index: 900;
+  opacity: 90%;
+}
+
+.product-image {
+  top: -40%;
+  right: 0;
+  z-index: 1000;
+}
+
+.product-list {
+  position: relative;
+  list-style: none;
+  margin-left: 0;
+}
+
+.product-list li:before {
+  content: "~";
+}
+
+.addCart-btn{
+  top: 60%;
+  right: -11%;
+}
+/* !Product page */
 
 /* login page */
 .rec1 {
