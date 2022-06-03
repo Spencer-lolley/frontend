@@ -1,5 +1,18 @@
 {
+  "/Clogin": "pages/Clogin.html",
+  "/SPlogin": "pages/SPlogin.html",
+  "/Login": "pages/Login.html",
   "/_app": "pages/_app.js",
+  "/cart": "pages/cart.html",
+  "/": "pages/index.html",
+  "/product/[slug]": "pages/product/[slug].html",
+  "/api/hello": "pages/api/hello.js",
+  "/serviceProvider/RegisterBusiness": "pages/serviceProvider/RegisterBusiness.html",
+  "/serviceProvider/Appointments": "pages/serviceProvider/Appointments.html",
+  "/serviceProvider/Profile": "pages/serviceProvider/Profile.html",
+  "/serviceProvider/UserProfile": "pages/serviceProvider/UserProfile.html",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js"
+  "/serviceProvider/login": "pages/serviceProvider/login.html",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
 }

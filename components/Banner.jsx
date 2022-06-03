@@ -6,9 +6,7 @@ const Banner = () => {
   return (
     <>
       <div className="mb-2 banner">
-        <div
-          className="w-11/12 mx-auto mt-10 overflow-hidden bg-center bg-cover rounded-lg bg-blue lg:mt-20"
-        >
+        <div className="w-11/12 mx-auto mt-10 overflow-hidden bg-center bg-cover rounded-lg bg-blue lg:mt-20">
           <div className="block py-20 m-8 md:flex md:flex-wrap md:justify-between md:items-center">
             <div className="block md:flex-row">
               <h1 className="text-6xl font-bold text-black uppercase">
@@ -23,7 +21,9 @@ const Banner = () => {
                 type="button"
                 className="px-8 py-5 mr-3 text-xl font-medium text-center bg-orange-600 rounded-full links sign focus:ring-4 focus:outline-none md:mr-0"
               >
-                Register here
+                <Link href="./serviceProvider/RegisterBusiness">
+                  <a>Register here</a>
+                </Link>
               </button>
             </div>
           </div>

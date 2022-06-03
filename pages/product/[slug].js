@@ -5,6 +5,7 @@ import { Meta, Nav, Footer } from "../../components";
 import Link from "next/link";
 import { AiFillStar } from "react-icons/ai";
 import Image from "next/image";
+import SingleProduct from "../../components/Product/SingleProduct";
 
 export default function ProductScreen() {
   const router = useRouter();
@@ -31,36 +32,12 @@ export default function ProductScreen() {
           </Link>
         </div>
 
-        <div className="w-full max-w-full mx-auto rounded-lg shadow-lg md:w-11/12 bg-GreyBackground">
-          <div className="relative grid grid-cols-1 md:grid-cols-2 md:gap-10 place-content-center">
-            <div className="order-last px-8 md:p-8 md:order-first">
-              <h2 className="text-2xl text-gray-500 capitalize md:text-3xl">
-                {product.productName}
-              </h2>
-              <h3 className="text-2xl font-bold md:mt-8 md:text-3xl text-RedBackground">
-                KES {product.price}
-              </h3>
-            </div>
-            <div className="relative">
-              <div className="hidden md:block product-background">
-                <Image
-                  src="../../Rectangle.png"
-                  layout="intrinsic"
-                  width={200}
-                  height={300}
-                />
-              </div>
-              <div className="flex justify-center md:absolute product-image">
-                <Image
-                  src="../../products/productImage.png"
-                  layout="intrinsic"
-                  width={200}
-                  height={200}
-                />
-              </div>
-            </div>
-          </div>
-
+        <div>
+          <SingleProduct 
+          image={`../../products/productImage.png`}
+          productName = {product.productName}
+          productPrice = {`KES ${product.price}`}
+          >
           <div className="relative grid md:mt-10 md:grid-cols-2 md:place-content-center">
             <div className="p-8">
               <span className="text-xl font-bold">Brand: </span>
@@ -101,6 +78,7 @@ export default function ProductScreen() {
               </div>
             </div>
           </div>
+          </SingleProduct>
         </div>
       </div>
     <Footer />
