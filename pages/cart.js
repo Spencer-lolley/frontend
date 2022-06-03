@@ -1,11 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import { Footer, Nav } from "../components";
+import { Footer, Meta, Nav } from "../components";
 import SingleProduct from "../components/Product/SingleProduct";
 export default function () {
   return (
     <>
       <Nav />
+      <Meta title="Cart" />
       <div className="px-8 mx-8 mt-10">
         <Link href="/" passHref>
           <a className="text-gray-500 hover:text-OrangeText">
@@ -13,7 +14,17 @@ export default function () {
           </a>
         </Link>
       </div>
-      <div className="mx-4 my-20">
+
+      <div className="flex flex-col items-center justify-center my-4">
+        <h3 className="my-2 text-gray-500 uppercase">Your cart is empty</h3>
+        <button className="px-6 py-1.5 font-semibold text-white uppercase rounded-lg bg-RedBackground">
+          <Link href="/" passHref>
+            <a>Start shopping</a>
+          </Link>
+        </button>
+      </div>
+
+      <div className="mx-4 my-20 ">
         <SingleProduct
           image={`../../products/productImage.png`}
           productName="Nice and Lovely"

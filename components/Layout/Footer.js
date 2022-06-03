@@ -3,10 +3,10 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <footer className="w-full p-4 bg-black sm:p-6 mx-auto">
-          <div className="my-8 grid grid-cols-2 gap-10 sm:gap-6 sm:grid-cols-3 p-10">
+      <footer className="w-full p-4 mx-auto bg-black sm:p-6">
+          <div className="grid grid-cols-2 gap-10 p-10 my-8 sm:gap-6 sm:grid-cols-3">
             <div className="mx-auto">
-              <h2 className="mb-6 text-2xl font-bold text-heading uppercase">
+              <h2 className="mb-6 text-2xl font-bold uppercase text-heading">
                 Logo
               </h2>
               <div className="mb-4">
@@ -19,34 +19,34 @@ export default function Footer() {
               </div>
             </div>
             <div className="mx-auto">
-              <h2 className="mb-6 text-sm font-semibold text-heading uppercase">
+              <h2 className="mb-6 text-sm font-semibold uppercase text-heading">
                 Quick Links
               </h2>
               <ul className="text-white">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline font-bold">
+                  <a href="#" className="font-bold hover:underline">
                     Shop
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline font-bold">
+                  <a href="#" className="font-bold hover:underline">
                     Barber?
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline font-bold">
+                  <a href="#" className="font-bold hover:underline">
                     Beauty Professional?
                   </a>
                 </li>
               </ul>
             </div>
             <div className="mx-auto">
-              <h2 className="mb-6 text-sm font-semibold text-heading uppercase">
+              <h2 className="mb-6 text-sm font-semibold uppercase text-heading">
                 Talk to us
               </h2>
               <ul className="text-white">
                 <li className="mb-4">
-                  <a href="mailto:#" className="hover:underline font-bold">
+                  <a href="mailto:#" className="font-bold hover:underline">
                     info@companyname.com
                   </a>
                 </li>
@@ -56,7 +56,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:#" className="hover:underline font-bold">
+                  <a href="mailto:#" className="font-bold hover:underline">
                     Help Center
                   </a>
                 </li>
