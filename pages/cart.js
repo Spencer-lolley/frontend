@@ -5,8 +5,9 @@ import SingleProduct from "../components/Product/SingleProduct";
 export default function () {
   return (
     <>
-      <Nav />
       <Meta title="Cart" />
+
+      <Nav />
       <div className="px-8 mx-8 mt-10">
         <Link href="/" passHref>
           <a className="text-gray-500 hover:text-OrangeText">
@@ -54,7 +55,7 @@ export default function () {
         </SingleProduct>
         <div className="float-right p-10 mx-4">
           <button className="px-2 py-1 font-semibold text-white uppercase rounded-md bg-RedBackground">
-            <Link href="" passHref>
+            <Link href="./checkout" passHref>
               <a>Checkout</a>
             </Link>
           </button>
