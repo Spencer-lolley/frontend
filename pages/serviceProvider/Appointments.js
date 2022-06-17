@@ -51,7 +51,7 @@ export default function Appointments() {
             <div className="mt-6 text-gray-500">
               <p>
                 You have an appointment today with{" "}
-                <span className="uppercase">client id 112334455 name her</span>
+                <span className="uppercase">client id 112334455 name her</span>{" "}
                 today at{" "}
                 <span className="p-1 text-white rounded bg-YellowText">
                   10:45am
@@ -59,17 +59,19 @@ export default function Appointments() {
               </p>
             </div>
 
-            <div className="flex justify-between text-white bottom-0">
-              <button className="bg-RedBackground px-4 rounded py-1 font-semibold">
-                <Link href="#" passHref>
-                  <a>Confirm</a>
-                </Link>
-              </button>
-              <button className="bg-RedBackground px-4 rounded py-1 font-semibold">
-                <Link href="#" passHref>
-                  <a>Cancel & Notify</a>
-                </Link>
-              </button>
+            <div className="bottom-0 absolute mb-6 mx-auto w-11/12">
+              <div className="flex justify-between text-white">
+                <button className="bg-RedBackground px-4 rounded py-1 font-semibold">
+                  <Link href="#" passHref>
+                    <a>Confirm</a>
+                  </Link>
+                </button>
+                <button className="bg-RedBackground px-4 rounded py-1 font-semibold">
+                  <Link href="#" passHref>
+                    <a>Cancel & Notify</a>
+                  </Link>
+                </button>
+              </div>
             </div>
           </div>
         </div>

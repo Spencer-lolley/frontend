@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/serviceProvider/Appointments.js"
+    ],
+    "/serviceProvider/Dashboard": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/serviceProvider/Dashboard.js"
     ]
   },
   "ampFirstPages": []
