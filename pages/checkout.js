@@ -133,9 +133,9 @@ export default function checkout() {
                   <p className="text-RedBackground">{errors.city?.message}</p>
                 </div>
 
-                <div className="float-right my-10 text-white bg-RedBackground">
-                  <button className="px-2 py-1 font-semibold text-white uppercase rounded-md bg-RedBackground">
-                    <Link href="./checkout" passHref>
+                <div className="float-right my-10 text-white rounded bg-RedBackground">
+                  <button className="px-2 py-1 font-semibold text-white uppercase">
+                    <Link href="./payment" passHref>
                       <a>Checkout</a>
                     </Link>
                   </button>

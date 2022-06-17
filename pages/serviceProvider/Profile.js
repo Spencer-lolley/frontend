@@ -28,11 +28,11 @@ export default function Profile() {
 
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
-  const [files,setFiles] = useState({
-    name:'Myfiles'
-  })
+  const [files, setFiles] = useState({
+    name: "Myfiles",
+  });
 
-  console.log(files); 
+  console.log(files);
   const openModal = () => {
     setShowModal((prev) => !prev);
   };
@@ -78,8 +78,14 @@ export default function Profile() {
             </div>
 
             <div className="mt-10">
-              <div className="flex items-center justify-center mt-2 text-YellowText">
-                <p className="uppercase">Business Hours</p>
+              <div className="flex items-center justify-center mt-2">
+                <p className="uppercase text-YellowText">Business Hours</p>
+              </div>
+              <div className="mt-2">
+                <div className="flex items-center font-semibold uppercase justify-evenly">
+                  <h4>Sun {" :"}</h4>
+                  <h5 className="text-RedBackground">9am - 2pm</h5>
+                </div>
               </div>
               <div className="flex items-center justify-center mt-10 text-white">
                 <Link href="#" passHref>
@@ -153,11 +159,27 @@ export default function Profile() {
           <div
             className={
               toggleState === "Reviews"
-                ? "active-content relative  w-full text-black bg-white rounded-3xl h-1/2"
+                ? "active-content relative w-full text-black bg-white rounded-3xl h-1/2"
                 : "content relative w-full text-black bg-white rounded-3xl h-1/2"
             }
           >
             <p className="m-4 font-semibold">No Reviews Here Yet.</p>
+
+            <div className="flex justify-between m-4">
+              <div>
+                <p className="font-semibold">Customer 1</p>
+                <p className="text-sm text-gray-500">
+                  Excellent serveices provided.
+                </p>
+              </div>
+              <div className="flex items-center justify-center mt-2 text-YellowText">
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+                <AiFillStar />
+              </div>
+            </div>
           </div>
 
           <div
