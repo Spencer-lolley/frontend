@@ -8,7 +8,7 @@ export default function SProviderLayout() {
   const innactive =
     "uppercase flex items-center text-sm font-bold py-4 px-6 h-12 overflow-hidden text-black text-ellipsis whitespace-nowrap hover:text-gray-900 hover:bg-gray-100 transition duration-300 ease-in-out";
   return (
-    <div className="w-2/5 h-screen md:flex md:w-1/4">
+    <div className="w-2/5 h-screen md:flex md:w-1/4 hidden">
       {" "}
       <div className="absolute min-h-full py-2 shadow-md w-60 bg-RedBackground">
         <div className="flex m-6 text-2xl uppercase">
@@ -24,7 +24,7 @@ export default function SProviderLayout() {
               <Link href="/serviceProvider/Profile" passHref>
                 <a
                   className={`${activeTab === "Profile" ? active : innactive}`}
-                  onClick={() => setActiveTab("Home")}
+                  onClick={() => setActiveTab("Profile")}
                   data-mdb-ripple="true"
                   data-mdb-ripple-color="dark"
                 >
@@ -74,6 +74,10 @@ export default function SProviderLayout() {
             </li>
           </ul>
         </div>
+      </div>
+      <div className="absolute right-0 flex items-center justify-center m-8">
+        <p className="mr-4 font-bold">User Name</p>
+        <img src="" className="w-10 h-10 bg-gray-900 rounded-full" alt="" />
       </div>
     </div>
   );

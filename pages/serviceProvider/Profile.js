@@ -53,10 +53,7 @@ export default function Profile() {
       <Meta title="Profile" />
 
       <SProviderLayout />
-      <div className="absolute right-0 flex items-center justify-center m-8">
-        <p className="mr-4 font-bold">User Name</p>
-        <img src="" className="w-10 h-10 bg-gray-900 rounded-full" alt="" />
-      </div>
+      
       <div className="block w-full mx-10 my-32 space-x-4 md:flex">
         <div className="relative flex items-center justify-center w-1/4 text-black bg-white rounded-3xl">
           <div className="flex flex-col items-center justify-center my-4 mt-4">

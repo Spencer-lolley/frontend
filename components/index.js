@@ -33,3 +33,6 @@ export { default as AddServiceModal } from './SProvider/Modal/AddServiceModal';
 export { default as AddProductModal } from './SProvider/Modal/AddProductModal';
 export { default as AddImagesModal } from './SProvider/Modal/AddImagesModal';
 export { default as DeleteProductModal } from './SProvider/Modal/DeleteProductModal'
+
+// BarChart
+export { default as BarChart } from './BarChart'

@@ -25,11 +25,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/serviceProvider/Appointments": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/serviceProvider/Appointments.js"
-    ],
     "/serviceProvider/Dashboard": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
